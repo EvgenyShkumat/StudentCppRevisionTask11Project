@@ -25,5 +25,14 @@
 */
 
 int task03(long long number) {
-	return 0;
+	number = number < 0 ? -number : number;
+	
+	int sum = 0;
+
+	while (number != 0) {
+		sum += number % 10;
+		number /= 10;
+	}
+
+	return sum;
 }
