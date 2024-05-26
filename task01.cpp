@@ -26,5 +26,19 @@
 */
 
 int task01(int number) {
-	return 0;
+	if (number < 2) {
+		return 0;
+	}
+
+	int divisor = 1;
+
+	for (int i = number - 1; i >= 0; i--)
+	{
+		if (number % i == 0) {
+			divisor = i;
+			break;
+		}
+	}
+
+	return divisor;
 }
