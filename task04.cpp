@@ -28,5 +28,17 @@
 */
 
 int task04(long long number) {
-	return 0;
+	number = number < 0 ? -number : number;
+
+	int max = 0;
+
+	while (number != 0) {
+		if (max < number % 10) {
+			max = number % 10;
+		}
+
+		number /= 10;
+	}
+
+	return max;
 }
